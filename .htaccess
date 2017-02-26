@@ -1,0 +1,15 @@
+RewriteEngine On
+Rewritebase /dashboard/crudphp/
+
+#Options +FollowSymlinks
+#Options -Indexes
+
+#RewriteCond %(REQUEST_FILENAME) !-d
+#RewriteCond %(REQUEST_FILENAME) !-f
+
+RewriteRule ^index?$ index.php
+RewriteRule ^index/update/([0-9]+) update.php?id=$1
+RewriteRule ^index/add?$ add.php
+RewriteRule ^index/delete/([0-9]+) delete.php?id=$1
+
+
